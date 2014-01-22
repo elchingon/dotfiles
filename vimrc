@@ -7,6 +7,7 @@ set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
 Bundle 'gmarik/vundle'
+Bundle 'tpope/vim-endwise'
 
 " My Bundles Here
 Bundle 'tpope/vim-fugitive'
@@ -61,6 +62,9 @@ map <Leader>l :w<cr>:call RunLastSpec()<CR>
 map <Leader>a :w<cr>:call RunAllSpecs()<CR>
 " Indent an entire file
 map <Leader>i mmgg=G`m<CR>
+" Set paste mode if copying from clipboard
+" will paste from current indentation 
+map <Leader>p :set paste<CR>o<esc>"*]p:set nopaste<cr>
 " Creates parent directories if needed
 map <Leader>d :!mkdir %:p:h<CR><CR>
 
