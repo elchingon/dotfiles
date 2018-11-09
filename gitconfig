@@ -1,5 +1,10 @@
+[credential]
+    helper = osxkeychain
+[credential "https://github.com"]
+    username = elchingon
+
 [user]
-	name = Alexi Carey
+	name = Alexii Carey
 	email = ciegoproductions@gmail.com
 
 [color]
@@ -19,19 +24,34 @@
 	untracked = cyan
 
 [alias]
-stat = status
-ci = commit
-br = branch
-co = checkout
-df = diff
-dc = diff --cached
-lg = log -p
-lol = log --graph --decorate --pretty=oneline --abbrev-commit
-lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
-ls = ls-files
-[github]
-	user = elchingonmancos
-	token = 837cc507e4c5cd447cc7cef849fe2dd2
+	stat = status
+	ci = commit
+	br = branch
+	co = checkout
+
+	#Push/pull/commit
+	pdev = push origin develop
+	udev = pull origin develop
+	amend = commit --amend
+	ci = commit
+	cim = commit -m
+	
+	#Infoz
+	count = shortlog -sn
+	df = diff --color
+	dc = diff --cached
+	wdf = diff --word-diff --color
+	fdf = diff --name-only --color
+	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
+	last = log -1 HEAD
+	lol = log --graph --decorate --pretty=oneline --abbrev-commit
+	lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
+	ls = ls-files
+	sh = show --pretty=format: --name-only
+
+#[github]
+#	user = elchingon
+#	token = 837cc507e4c5cd447cc7cef849fe2dd2
 [core]
 	pager = less -r
 [push]

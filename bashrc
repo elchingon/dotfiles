@@ -1,14 +1,12 @@
 
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
-_PS1 ()
-{
-  local PRE= NAME="$1" LENGTH="$2";
-  [[ "$NAME" != "${NAME#$HOME/}" || -z "${NAME#$HOME}" ]] &&
-  PRE+='~' NAME="${NAME#$HOME}" LENGTH=$[LENGTH-1];
-  ((${#NAME}>$LENGTH)) && NAME=".${NAME:$[${#NAME}-LENGTH+4]}";
-  echo "$PRE$NAME"
-}
-PS1='\u@\h:$(_PS1 "$PWD" 16)\$ '
-# If not running interactively, do not do anything
-[[ $- != *i* ]] && return
-[[ -z "$TMUX" ]] && exec tmux
+export EDITOR='vim'
+
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"
+
+export NVM_DIR="/Users/alexiicarey/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+if [ -f $(brew --prefix)/etc/bash_completion ]; then source $(brew --prefix)/etc/bash_completion; fi
+
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"
