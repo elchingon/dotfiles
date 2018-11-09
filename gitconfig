@@ -24,11 +24,9 @@
 	untracked = cyan
 
 [alias]
-	stat = status
-	ci = commit
+	stat = status	
 	br = branch
 	co = checkout
-
 	#Push/pull/commit
 	pdev = push origin develop
 	udev = pull origin develop
@@ -48,10 +46,6 @@
 	lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
 	ls = ls-files
 	sh = show --pretty=format: --name-only
-
-#[github]
-#	user = elchingon
-#	token = 837cc507e4c5cd447cc7cef849fe2dd2
 [core]
 	pager = less -r
 [push]
