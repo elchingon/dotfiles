@@ -33,6 +33,8 @@
 	amend = commit --amend
 	ci = commit
 	cim = commit -m
+	cl = clone
+	cbr = "!git branch | grep '\\*'"
 	
 	#Infoz
 	count = shortlog -sn
